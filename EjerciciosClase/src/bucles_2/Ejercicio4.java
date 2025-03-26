@@ -1,0 +1,35 @@
+package bucles_2;
+
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Jugador 1, introduce un nº secreto entre 1 y 10: ");
+		int numero = entrada.nextInt();
+		
+		while(numero<1 || numero>10) {
+			System.out.println("El número debe estar entre 1 y 10");
+			numero = entrada.nextInt();
+		}
+		
+		System.out.println("Jugador 2, intenta adivinar el número: ");
+		int intento = Integer.MIN_VALUE;
+		
+		while(numero!=intento) {
+			System.out.print("Introduce tu intento (un número entre 1 y 10): ");
+            intento = entrada.nextInt();
+            
+            if(intento<numero) {
+            	System.out.println("El número es mayor");
+            }
+            else if(intento>numero) {
+            	System.out.println("El número es menor");
+            }
+		}
+		System.out.println("Has adivinado el número");
+		entrada.close();
+	}
+
+}
