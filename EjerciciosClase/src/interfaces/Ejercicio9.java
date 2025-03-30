@@ -30,7 +30,7 @@ public class Ejercicio9 {
 		for(int i=1; i<=20; i++) {
 			serie.setComenzar(i);
             System.out.print("Serie del " + i + ": ");
-            for (int j=0; j<10; j++) {
+            for (int j=1; j<=10; j++) {
                 System.out.print(serie.getSiguiente() + "|");
             }
             System.out.println();
