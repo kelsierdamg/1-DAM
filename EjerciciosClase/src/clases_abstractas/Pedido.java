@@ -25,7 +25,8 @@ public class Pedido {
 		for(int i=0; i<lineas.size(); i++) {
 			LineaPedido linea = lineas.get(i);
 			if(linea.getProducto().equals(h)) {
-				u++;
+				linea.setUnidadesCompradas(linea.getUnidadesCompradas() + u);
+				return;
 			}
 		}
 		lineas.add(new LineaPedido(h, u));
